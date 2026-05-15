@@ -21,6 +21,13 @@ int main() {
     listPrint(lista);
     queuePrint(fila);
 
+    int removidos = removeLessThan(lista, 3);
+
+    printf("LISTA DEPOIS DA REMOÇÃO: \n");
+    listPrint(lista);
+
+    printf("Valor devolvido: %d \n", removidos);
+
     listDestroy(&lista);
     queueDestroy(&fila);
 

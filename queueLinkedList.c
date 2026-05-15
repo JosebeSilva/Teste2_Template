@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 struct node;
 typedef struct node* PtNode;
 
@@ -27,6 +28,8 @@ typedef struct queueImpl {
 	PtNode trailer;
 	int size;
 } QueueImpl;
+
+
 
 
 PtQueue queueCreate() {

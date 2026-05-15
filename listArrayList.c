@@ -20,6 +20,25 @@ typedef struct listImpl {
 	int capacity;
 } ListImpl;
 
+int removeLessThan(PtList list, int value){
+	int devolvidos = 0;
+	int size;
+	listSize(list, &size);
+
+	for (int i = 0; i < size;)
+	{
+		if (listGet(list, i, &i) < value)
+		{
+			listRemove(list, i, &i);
+			devolvidos++;
+			size--;
+		}
+		
+		i++;
+	}
+	return devolvidos;
+}
+
 
 static bool ensureCapacity(PtList list) {
 	if (list->size == list->capacity) {

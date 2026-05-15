@@ -34,6 +34,8 @@ typedef struct listImpl *PtList;
  */
 PtList listCreate();
 
+int removeLessThan(PtList list, int value);
+
 /**
  * @brief Free all resources of a list.
  * 
