@@ -12,7 +12,7 @@
 #include "queue.h" 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "list.h"
 
 struct node;
 typedef struct node* PtNode;
@@ -29,7 +29,27 @@ typedef struct queueImpl {
 	int size;
 } QueueImpl;
 
+PtQueue evenOdd(PtList list){
+	PtQueue filaNova = queueCreate();
+	int size;
+	listSize(list, &size);
 
+	for (int i = 0; i < size; i++)
+	{
+		int val;
+        listGet(list, i, &val);
+
+		if (val %2 == 0)
+		{
+			queueEnqueue(filaNova, 'p');
+		}
+		
+		else{
+		queueEnqueue(filaNova, 'i');
+	    }
+	}
+	return filaNova;
+}
 
 
 PtQueue queueCreate() {

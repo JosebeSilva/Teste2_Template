@@ -18,12 +18,15 @@
 
 #include <stdbool.h>
 #include "queueElem.h"
+#include "list.h"
 
 /** Forward declaration of the data structure. */
 struct queueImpl;
 
 /** Definition of pointer to the  data stucture. */
 typedef struct queueImpl *PtQueue;
+
+PtQueue evenOdd(PtList list);
 
 /**
  * @brief Creates a new empty queue.

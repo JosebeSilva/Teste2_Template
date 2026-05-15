@@ -21,12 +21,30 @@ int main() {
     listPrint(lista);
     queuePrint(fila);
 
+
+    PtQueue evenQueue = evenOdd(lista);
+    printf("FILA EVENODD: \n");
+    queuePrint(evenQueue);
+
+
     int removidos = removeLessThan(lista, 3);
+
 
     printf("LISTA DEPOIS DA REMOÇÃO: \n");
     listPrint(lista);
 
+
     printf("Valor devolvido: %d \n", removidos);
+
+
+    printf("REMOÇÃO DE ELEMENTOS: \n");
+    char elemento;
+    while (!queueIsEmpty(fila))
+    {
+        queueDequeue(fila, &elemento);
+        printf("%c \n", elemento);
+    }
+    
 
     listDestroy(&lista);
     queueDestroy(&fila);
