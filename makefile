@@ -26,10 +26,10 @@ endif
 
 # Targets
 default:
-	$(CC) $(FLAGS) -o $(EXECUTABLE) main.c input.c
+	$(CC) $(FLAGS) -o $(EXECUTABLE) main.c input.c listArrayList.c listElem.c queueElem.c queueLinkedList.c
 
 debug:
-	$(CC) $(FLAGS) $(DEBUG_FLAGS) -o $(EXECUTABLE) main.c input.c
+	$(CC) $(FLAGS) $(DEBUG_FLAGS) -o $(EXECUTABLE) main.c input.c listArrayList.c listElem.c queueElem.c queueLinkedList.c
 
 clean:
 	$(RM) $(EXECUTABLE)

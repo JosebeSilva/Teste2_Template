@@ -1,11 +1,28 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #include "input.h"
+#include "list.h"
+#include "queue.h"
 
 int main() {
 
-    /* Program code. */
-    printf("I do nothing at this moment.\n");
+    PtList lista = listCreate();
+    PtQueue fila = queueCreate();
+
+    listAdd(lista, 0, 9);
+    listAdd(lista, 0, 2);
+    listAdd(lista, 0, 7);
+    listAdd(lista, 0, 4);
+    listAdd(lista, 4, 1);
+
+    queueEnqueue(fila, 'a');
+    queueEnqueue(fila, 'b');queueEnqueue(fila, 'c');
+
+    listPrint(lista);
+    queuePrint(fila);
+
+    listDestroy(&lista);
+    queueDestroy(&fila);
 
     return EXIT_SUCCESS;
 }
